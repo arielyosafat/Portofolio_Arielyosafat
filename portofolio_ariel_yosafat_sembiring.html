@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariel Yosafat Sembiring - Portofolio & Resume</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        navy: {
+                            800: '#0f172a',
+                            900: '#090d16',
+                            950: '#030712',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .light-glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-slate-900/80 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo / Initials -->
+                <a href="#hero" class="flex items-center gap-2 font-bold text-xl tracking-tight text-white group">
+                    <span class="bg-gradient-to-r from-sky-500 to-indigo-500 text-white w-9 h-9 rounded-xl flex items-center justify-center font-extrabold shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform">AYS</span>
+                    <span class="hidden sm:inline">Ariel Yosafat</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                    <a href="#about" class="hover:text-sky-400 transition-colors">Tentang</a>
+                    <a href="#education" class="hover:text-sky-400 transition-colors">Pendidikan</a>
+                    <a href="#experience" class="hover:text-sky-400 transition-colors">Pengalaman</a>
+                    <a href="#skills" class="hover:text-sky-400 transition-colors">Keahlian</a>
+                    <a href="#organization" class="hover:text-sky-400 transition-colors">Organisasi</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="https://wa.me/6282280982141" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all shadow-lg shadow-sky-500/25 flex items-center gap-2">
+                        <i class="fab font-bold fa-whatsapp text-lg"></i> Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2">
+                    <i class="fas fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-sky-400 font-medium">Tentang</a>
+            <a href="#education" class="block py-2 text-slate-300 hover:text-sky-400 font-medium">Pendidikan</a>
+            <a href="#experience" class="block py-2 text-slate-300 hover:text-sky-400 font-medium">Pengalaman</a>
+            <a href="#skills" class="block py-2 text-slate-300 hover:text-sky-400 font-medium">Keahlian</a>
+            <a href="#organization" class="block py-2 text-slate-300 hover:text-sky-400 font-medium">Organisasi</a>
+            <a href="https://wa.me/6282280982141" target="_blank" class="w-full mt-4 bg-sky-500 text-white text-center py-2.5 rounded-lg font-semibold flex items-center justify-center gap-2">
+                <i class="fab fa-whatsapp text-lg"></i> WhatsApp Saya
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="relative py-16 md:py-24 overflow-hidden">
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl -z-10"></div>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Text Content -->
+                    <div class="md:col-span-7 text-center md:text-left space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs sm:text-sm font-medium">
+                            <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                            Lulusan S1 Teknik Industri (IPK 3.80)
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                            Halo, Saya <br class="hidden sm:inline"/>
+                            <span class="gradient-text">Ariel Yosafat Sembiring</span>
+                        </h1>
+                        
+                        <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+                            Profesional berlatar belakang Teknik Industri yang fokus pada optimasi proses manufaktur, manajemen rantai pasok (Supply Chain), operasional, serta siap memberikan kontribusi terbaik bagi pertumbuhan perusahaan.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+                            <a href="mailto:arielyosafat5@gmail.com" class="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-xl font-semibold transition-all shadow-lg shadow-sky-500/25 flex items-center gap-2">
+                                <i class="fas fa-envelope"></i> Kirim Email
+                            </a>
+                            <a href="#experience" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-6 py-3 rounded-xl font-semibold transition-all flex items-center gap-2">
+                                Lihat Pengalaman <i class="fas fa-arrow-down text-xs"></i>
+                            </a>
+                        </div>
+
+                        <!-- Quick Contact Bar -->
+                        <div class="pt-6 border-t border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-400">
+                            <div class="flex items-center justify-center md:justify-start gap-3">
+                                <i class="fas fa-phone-alt text-sky-400"></i>
+                                <span>+62 822 8098 2141</span>
+                            </div>
+                            <div class="flex items-center justify-center md:justify-start gap-3">
+                                <i class="fas fa-map-marker-alt text-sky-400"></i>
+                                <span>Deli Serdang, Sumatera Utara</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Avatar / Image Showcase -->
+                    <div class="md:col-span-5 flex justify-center">
+                        <div class="relative group">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-sky-500 to-indigo-500 rounded-3xl blur-lg opacity-40 group-hover:opacity-75 transition duration-500"></div>
+                            <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden border-2 border-slate-700/80 bg-slate-800 shadow-2xl flex flex-col items-center justify-center p-4">
+                                <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-slate-700 overflow-hidden mb-4 border-4 border-slate-600 shadow-inner flex items-center justify-center">
+                                    <i class="fas fa-user-tie text-6xl text-slate-400"></i>
+                                </div>
+                                <h3 class="text-white font-bold text-lg">Ariel Y. Sembiring</h3>
+                                <p class="text-sky-400 text-sm font-medium">S1 Teknik Industri</p>
+                                <span class="mt-3 text-xs px-3 py-1 bg-slate-900/90 text-slate-300 rounded-full border border-slate-700">
+                                    <i class="fas fa-graduation-cap text-sky-400 mr-1"></i> IPK 3.80 / 4.00
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile / About Section -->
+        <section id="about" class="py-16 bg-slate-950/60 border-y border-slate-800/60">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-semibold text-sky-400 tracking-widest uppercase mb-2">Profil Ringkas</h2>
+                    <p class="text-3xl font-extrabold text-white">Tentang Saya</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 sm:p-8">
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed text-justify sm:text-left">
+                        Saya merupakan <strong>Lulusan S1 Teknik Industri</strong> dari Universitas Medan Area yang memiliki minat dan komitmen tinggi dalam mengembangkan karir di bidang Teknik Industri & Operasional. Memiliki pemahaman yang solid tentang prinsip-prinsip dasar Teknik Industri, terutama dalam mengoptimasi kegiatan manusia seperti produksi, manajemen operasional, <em>Supply Chain Management</em>, pengelolaan proses, dan analisis ekonomi. Memiliki kemampuan komunikasi yang baik, adaptif, serta terbiasa bekerja secara kolaboratif dalam tim untuk mencapai tujuan strategis perusahaan.
+                    </p>
+
+                    <!-- Key Highlights Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-6 border-t border-slate-800">
+                        <div class="p-4 rounded-xl bg-slate-800/40 border border-slate-800 text-center">
+                            <i class="fas fa-cogs text-2xl text-sky-400 mb-2"></i>
+                            <h4 class="text-white font-semibold text-sm">Optimasi Sistem</h4>
+                            <p class="text-slate-400 text-xs mt-1">Pengawasan & efisiensi alur produksi</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-800/40 border border-slate-800 text-center">
+                            <i class="fas fa-truck-loading text-2xl text-sky-400 mb-2"></i>
+                            <h4 class="text-white font-semibold text-sm">Supply Chain</h4>
+                            <p class="text-slate-400 text-xs mt-1">Manajemen rantai pasok & logistik</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-800/40 border border-slate-800 text-center">
+                            <i class="fas fa-users-cog text-2xl text-sky-400 mb-2"></i>
+                            <h4 class="text-white font-semibold text-sm">Kolaboratif</h4>
+                            <p class="text-slate-400 text-xs mt-1">Komunikasi tim & problem solving</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-semibold text-sky-400 tracking-widest uppercase mb-2">Riwayat Belajar</h2>
+                    <p class="text-3xl font-extrabold text-white">Pendidikan Formal</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Degree Education -->
+                    <div class="glass-card p-6 rounded-2xl relative overflow-hidden group hover:border-sky-500/50 transition-all">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <span class="text-xs font-semibold text-sky-400 bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">2020 - 2024</span>
+                                <h3 class="text-xl font-bold text-white mt-2">S1 Teknik Industri</h3>
+                                <p class="text-slate-400 text-sm">Universitas Medan Area</p>
+                            </div>
+                            <span class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-bold px-3 py-1.5 rounded-xl text-sm">
+                                IPK 3.80
+                            </span>
+                        </div>
+                        <div class="border-t border-slate-800 pt-4 mt-4">
+                            <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Mata Kuliah Relevan:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-800 text-slate-300 text-xs px-2.5 py-1 rounded-md">Dasar Teknik Industri</span>
+                                <span class="bg-slate-800 text-slate-300 text-xs px-2.5 py-1 rounded-md">Peralatan Industri</span>
+                                <span class="bg-slate-800 text-slate-300 text-xs px-2.5 py-1 rounded-md">Manajemen Industri</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vocational Education -->
+                    <div class="glass-card p-6 rounded-2xl relative overflow-hidden group hover:border-sky-500/50 transition-all">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <span class="text-xs font-semibold text-sky-400 bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">2016 - 2019</span>
+                                <h3 class="text-xl font-bold text-white mt-2">Teknik Audio Video</h3>
+                                <p class="text-slate-400 text-sm">SMK Swasta Immanuel Medan</p>
+                            </div>
+                            <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-slate-400">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                        </div>
+                        <div class="border-t border-slate-800 pt-4 mt-4">
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Mempelajari dasar-dasar kelistrikan, elektronika audio-video, perakitan perangkat hardware, serta prinsip teknis dasar operasional alat elektronik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section (Internships & Work) -->
+        <section id="experience" class="py-16 bg-slate-950/60 border-t border-slate-800/60">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-semibold text-sky-400 tracking-widest uppercase mb-2">Jejak Karir</h2>
+                    <p class="text-3xl font-extrabold text-white">Pengalaman Kerja & Magang</p>
+                </div>
+
+                <!-- Timeline Container -->
+                <div class="relative border-l-2 border-slate-800 ml-4 md:ml-32 space-y-8">
+                    
+                    <!-- Item 1: Money Changer -->
+                    <div class="relative pl-6 md:pl-8 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sky-500 ring-4 ring-slate-900"></div>
+                        <span class="md:absolute md:-left-36 md:top-1 text-xs font-semibold text-sky-400 bg-sky-500/10 px-2.5 py-1 rounded-md w-max mb-2 inline-block">
+                            Apr - Okt 2026
+                        </span>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <span class="text-xs text-sky-400 font-semibold uppercase tracking-wider">Pengalaman Kerja</span>
+                            <h3 class="text-lg font-bold text-white mt-1">Teller & Sales Marketing</h3>
+                            <p class="text-slate-400 text-sm font-medium mb-3">PT. Binavalasindo Dolarasia (Money Changer)</p>
+                            <ul class="list-disc list-inside text-slate-300 text-sm space-y-1.5">
+                                <li>Melayani transaksi penukaran mata uang asing dengan akurasi dan ketelitian tinggi.</li>
+                                <li>Melakukan pemasaran produk layanan transaksi valuta asing kepada nasabah individu dan korporat.</li>
+                                <li>Mengelola pencatatan arus kas operasional harian secara sistematis.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: MSIB Game Dev -->
+                    <div class="relative pl-6 md:pl-8 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 group-hover:bg-sky-500 transition-colors ring-4 ring-slate-900"></div>
+                        <span class="md:absolute md:-left-36 md:top-1 text-xs font-semibold text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md w-max mb-2 inline-block">
+                            Agu - Des 2023
+                        </span>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <span class="text-xs text-indigo-400 font-semibold uppercase tracking-wider">Magang MSIB Batch 5</span>
+                            <h3 class="text-lg font-bold text-white mt-1">Game Development</h3>
+                            <p class="text-slate-400 text-sm font-medium mb-3">PT. Kinema Systrans Multimedia</p>
+                            <ul class="list-disc list-inside text-slate-300 text-sm space-y-1.5">
+                                <li>Mendesain struktur dan konsep rancangan game secara komprehensif.</li>
+                                <li>Membuat desain visual karakter game sesuai spesifikasi kebutuhan produk.</li>
+                                <li>Mengembangkan logika dan pemrograman untuk menjalankan mekanisme permainan.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: PT Tales Inti Sawit -->
+                    <div class="relative pl-6 md:pl-8 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 group-hover:bg-sky-500 transition-colors ring-4 ring-slate-900"></div>
+                        <span class="md:absolute md:-left-36 md:top-1 text-xs font-semibold text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md w-max mb-2 inline-block">
+                            Feb - Apr 2023
+                        </span>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <span class="text-xs text-emerald-400 font-semibold uppercase tracking-wider">Kerja Praktek (KP)</span>
+                            <h3 class="text-lg font-bold text-white mt-1">Pengolahan Kelapa Sawit (CPO)</h3>
+                            <p class="text-slate-400 text-sm font-medium mb-3">PT. Tales Inti Sawit</p>
+                            <ul class="list-disc list-inside text-slate-300 text-sm space-y-1.5">
+                                <li>Mempelajari seluruh tahapan alur proses pengolahan buah sawit menjadi Crude Palm Oil (CPO).</li>
+                                <li>Menganalisis sistem operasional di setiap stasiun kerja pabrik.</li>
+                                <li>Identifikasi potensi risiko dan analisis kecelakaan kerja yang terjadi di area lapangan.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Smart City ITB -->
+                    <div class="relative pl-6 md:pl-8 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 group-hover:bg-sky-500 transition-colors ring-4 ring-slate-900"></div>
+                        <span class="md:absolute md:-left-36 md:top-1 text-xs font-semibold text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md w-max mb-2 inline-block">
+                            Sep 2022 - Jan 2023
+                        </span>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <span class="text-xs text-sky-400 font-semibold uppercase tracking-wider">Magang</span>
+                            <h3 class="text-lg font-bold text-white mt-1">Smart City Solution for Sustainable Cities</h3>
+                            <p class="text-slate-400 text-sm font-medium mb-3">SCCIC ITB</p>
+                            <ul class="list-disc list-inside text-slate-300 text-sm space-y-1.5">
+                                <li>Memberikan sumbangsih ide dan solusi atas permasalahan masyarakat di Desa Cangkingan, Indramayu.</li>
+                                <li>Merancang dan merumuskan konsep program rumah pintar (smart home).</li>
+                                <li>Mengoperasikan dan menguji sistem rumah pintar untuk efektivitas layanan desa.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Kasir & BRILink -->
+                    <div class="relative pl-6 md:pl-8 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 group-hover:bg-sky-500 transition-colors ring-4 ring-slate-900"></div>
+                        <span class="md:absolute md:-left-36 md:top-1 text-xs font-semibold text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md w-max mb-2 inline-block">
+                            Pengalaman Tambahan
+                        </span>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider">Operasional & Finansial</span>
+                            <h3 class="text-lg font-bold text-white mt-1">Kasir Toko & Penjaga Gerai BRILink</h3>
+                            <p class="text-slate-400 text-sm font-medium mb-3">Sektor Perbankan & Ritel Layanan</p>
+                            <p class="text-slate-300 text-sm">
+                                Bertanggung jawab atas pelayanan transaksi perbankan harian mikro (BRILink), rekonsiliasi data penutupan kasir toko, serta memberikan pelayanan pelanggan yang efisien dan ramah.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-semibold text-sky-400 tracking-widest uppercase mb-2">Kompetensi</h2>
+                    <p class="text-3xl font-extrabold text-white">Keahlian & Kemampuan</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Technical Skills -->
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 font-bold">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Keahlian Teknis & Industri</h3>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm font-medium text-slate-300 mb-1">
+                                    <span>Microsoft Office (Excel & Word)</span>
+                                    <span class="text-sky-400">Tingkat Lanjut</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-sky-500 w-[90%] rounded-full"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-sm font-medium text-slate-300 mb-1">
+                                    <span>Proses Manufaktur</span>
+                                    <span class="text-sky-400">Kompeten</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-sky-500 w-[85%] rounded-full"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-sm font-medium text-slate-300 mb-1">
+                                    <span>Supply Chain Management</span>
+                                    <span class="text-sky-400">Kompeten</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-sky-500 w-[85%] rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-bold">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Soft Skills & Personal</h3>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="bg-slate-800 border border-slate-700 text-slate-200 px-3 py-2 rounded-xl text-sm flex items-center gap-2">
+                                <i class="fas fa-clock text-sky-400"></i> Manajemen Waktu
+                            </span>
+                            <span class="bg-slate-800 border border-slate-700 text-slate-200 px-3 py-2 rounded-xl text-sm flex items-center gap-2">
+                                <i class="fas fa-lightbulb text-sky-400"></i> Kreatif dalam Bekerja
+                            </span>
+                            <span class="bg-slate-800 border border-slate-700 text-slate-200 px-3 py-2 rounded-xl text-sm flex items-center gap-2">
+                                <i class="fas fa-users text-sky-400"></i> Bekerja Tim & Personal
+                            </span>
+                            <span class="bg-slate-800 border border-slate-700 text-slate-200 px-3 py-2 rounded-xl text-sm flex items-center gap-2">
+                                <i class="fas fa-comments text-sky-400"></i> Public Speaking
+                            </span>
+                            <span class="bg-slate-800 border border-slate-700 text-slate-200 px-3 py-2 rounded-xl text-sm flex items-center gap-2">
+                                <i class="fas fa-bolt text-sky-400"></i> Terampil dalam Hal Baru
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organization Section -->
+        <section id="organization" class="py-16 bg-slate-950/60 border-t border-slate-800/60">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-semibold text-sky-400 tracking-widest uppercase mb-2">Kepemimpinan</h2>
+                    <p class="text-3xl font-extrabold text-white">Pengalaman Organisasi</p>
+                </div>
+
+                <div class="glass-card p-6 sm:p-8 rounded-2xl">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-800 pb-6 mb-6">
+                        <div>
+                            <span class="text-xs font-semibold text-sky-400 bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">2022 - 2024</span>
+                            <h3 class="text-2xl font-bold text-white mt-2">IMTI (Ikatan Mahasiswa Teknik Industri)</h3>
+                            <p class="text-slate-400 text-sm">Universitas Medan Area (UMA)</p>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-xl text-sm font-medium border border-slate-700 inline-block">
+                                Active Member & Event Coordinator
+                            </span>
+                        </div>
+                    </div>
+
+                    <h4 class="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-4">Kontribusi & Peran Event:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="p-4 rounded-xl bg-slate-800/40 border border-slate-800">
+                            <div class="w-8 h-8 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center mb-3">
+                                <i class="fas fa-vote-yea"></i>
+                            </div>
+                            <h5 class="text-white font-semibold text-sm">Panitia Acara</h5>
+                            <p class="text-slate-400 text-xs mt-1">Pemilihan Ketua IMTI Universitas Medan Area.</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-800/40 border border-slate-800">
+                            <div class="w-8 h-8 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-3">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <h5 class="text-white font-semibold text-sm">Panitia Humas</h5>
+                            <p class="text-slate-400 text-xs mt-1">Pelantikan BPH (Badan Pengurus Harian) IMTI UMA.</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-800/40 border border-slate-800">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-3">
+                                <i class="fas fa-route"></i>
+                            </div>
+                            <h5 class="text-white font-semibold text-sm">Panitia Korlap</h5>
+                            <p class="text-slate-400 text-xs mt-1">Gathering Industrial IMTI UMA Angkatan ke-6.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Contact Section -->
+        <section id="contact" class="py-20 relative">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="glass-card p-8 sm:p-12 rounded-3xl border border-sky-500/30 relative overflow-hidden">
+                    <div class="absolute -top-24 -right-24 w-48 h-48 bg-sky-500/20 rounded-full blur-2xl"></div>
+                    
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+                        Tertarik Bermitra atau Merekrut Saya?
+                    </h2>
+                    <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+                        Saya selalu terbuka untuk berdiskusi mengenai peluang karir, proyek manufaktur, maupun pengembangan industri.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="https://wa.me/6282280982141" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-emerald-600/30 flex items-center gap-2">
+                            <i class="fab fa-whatsapp text-xl"></i> Hubungi WhatsApp
+                        </a>
+                        <a href="mailto:arielyosafat5@gmail.com" class="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-sky-500/30 flex items-center gap-2">
+                            <i class="fas fa-envelope text-xl"></i> Kirim Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-950 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>© 2026 Ariel Yosafat Sembiring. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
